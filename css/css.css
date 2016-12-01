@@ -1,5 +1,20 @@
+* {
+  font-family: "Roboto", "Helvetica", sans-serif; }
 
-.body {
-  background-color: black; }
+body {
+  background-color: #edf3f3; }
+
+header, footer {
+  background-color: #3f3f3f; }
+
+.container {
+  background-color: #e8e8e8; }
+
+#top-carousel {
+  height: 400px; }
+
+.hr {
+  background-color: #000;
+  height: 1px; }
 
 /*# sourceMappingURL=css.css.map */

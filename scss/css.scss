@@ -1,5 +1,29 @@
+$font: 'Roboto','Helvetica', sans-serif;
+$background-global: #edf3f3;
+$global-color:#000000;
+$header-footer-color:#3f3f3f;
+$tailleThumbnails:150px;
+$bg-container:#e8e8e8;
+$bk:#000;
+$heightHr:1px;
 
-
-.body{
-background-color:black;
+*{
+    font-family:$font;
+}
+body{
+    background-color: $background-global;
+   
+}
+header, footer{
+    background-color:$header-footer-color;
+}
+.container{
+    background-color:$bg-container;
+}
+#top-carousel{
+    height:400px;
+}
+.hr{
+    background-color:$bk; 
+    height:$heightHr;
 }
