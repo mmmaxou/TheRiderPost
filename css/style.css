@@ -35,16 +35,53 @@ a, a:hover, a:visited {
     font-weight: 300;
     letter-spacing: 10px;
 }
+.hr-vertical {
+    display: block;
+    background-color: white;
+    height: 45px;
+    width: 1px;
+    margin: 0 15px;
+}
+
 /*
-##################################
-#############  ##############
-##################################
+#################################
+############# Logo ##############
+#################################
+*/
+
+#logo {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+#logo h1 {
+    margin: 0;
+    line-height: 2.6rem;
+}
+#the, #post {
+    color: white;
+}
+#the h1{
+    left: -5rem;
+    transform: translateX(-5rem);
+}
+#rider h1{
+    color: aquamarine;
+}
+#post h1 {    
+    transform: translateX(5rem);
+}
+
+
+/*
+######################################
+############# Thumbnail ##############
+######################################
 */
 
 img {
     max-width: 100%;
 }
-
 div.thumbnail {
     border: none;
 }
@@ -75,3 +112,49 @@ div.thumbnail-overlay {
     height: 100%;
     top: 0;
 }
+
+/*
+###################################
+############# Footer ##############
+###################################
+*/
+
+footer {
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.socials a {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-image: url("../image/socials.jpg");
+}
+#btn-fb {
+    background-position: -3px -5px;
+}
+#btn-fb:hover {
+    background-position: -3px -52px;    
+}
+#btn-tw {
+    background-position: -64px -5px;
+}
+#btn-tw:hover {
+    background-position: -64px -52px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
