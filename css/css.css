@@ -1,20 +1,233 @@
+/*
+##############################################
+############# CLASSES GENERALES ##############
+##############################################
+*/
+/* line 16, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.myFont {
+  /*    font-family: 'Dosis', sans-serif;*/
+  font-size: 40px;
+  border: 0;
+  margin: 0;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* line 24, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.fix-it {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 29, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 32, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.middle-content {
+  display: flex;
+  /* contexte sur le parent */
+  flex-direction: column;
+  /* direction d'affichage verticale */
+  justify-content: center;
+  /* alignement vertical */
+}
+
+/* line 37, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+a, a:hover, a:visited {
+  color: inherit;
+}
+
+/* line 40, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.roboto-light {
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+
+/* line 44, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 * {
-  font-family: "Roboto", "Helvetica", sans-serif; }
+  font-family: "Roboto", "Helvetica", sans-serif;
+}
 
+/* line 47, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 body {
-  background-color: #edf3f3; }
+  background-color: #edf3f3;
+}
 
+/* line 51, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 header, footer {
-  background-color: #3f3f3f; }
+  background-color: #3f3f3f;
+}
 
-.container {
-  background-color: #e8e8e8; }
+/* line 54, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+img {
+  max-width: 100%;
+}
 
-#top-carousel {
-  height: 400px; }
-
+/* line 57, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 .hr {
   background-color: #000;
-  height: 1px; }
+  height: 1px;
+}
 
-/*# sourceMappingURL=css.css.map */
+/* line 61, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.hr-vertical {
+  display: block;
+  background-color: white;
+  height: 45px;
+  width: 1px;
+  margin: 0 15px;
+}
+
+/* line 68, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.container {
+  background-color: #e8e8e8;
+}
+
+/* line 71, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#top-carousel {
+  height: 400px;
+}
+
+/*
+#################################
+############# Logo ##############
+#################################
+*/
+/* line 81, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#logo {
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* line 85, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#logo h1 {
+  margin: 0;
+  color: white;
+  line-height: 1.7rem;
+}
+
+/* line 91, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#logo span {
+  display: inline;
+}
+
+/* line 95, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#the h1 {
+  display: inline;
+  margin-right: 10rem;
+}
+
+/* line 100, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#post h1 {
+  display: inline;
+  margin-left: 10rem;
+}
+
+/* line 104, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+#rider h1 {
+  display: inline;
+  color: aquamarine;
+}
+
+/*
+######################################
+############# Thumbnail ##############
+######################################
+*/
+/* line 114, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+div.thumbnail {
+  border: none;
+}
+
+/* line 117, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+div.thumbnail .thumbnail-item {
+  padding: 0;
+  position: relative;
+}
+
+/* line 121, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+div.thumbnail .thumbnail-item p {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: white;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* line 133, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+div.thumbnail .thumbnail-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 139, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+div.thumbnail .thumbnail-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+/*
+###################################
+############# Footer ##############
+###################################
+*/
+/* line 155, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer {
+  padding: 50px 0;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* line 163, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer a {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  background-image: url("../image/socials.png");
+}
+
+/* line 170, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer #btn-fb {
+  background-position: -3px -5px;
+}
+
+/* line 172, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer #btn-fb:hover {
+  background-position: -3px -52px;
+}
+
+/* line 176, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer #btn-tw {
+  background-position: -64px -5px;
+}
+
+/* line 178, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+footer #btn-tw:hover {
+  background-position: -64px -52px;
+}
+
+/*
+###########################################
+############# Video-Produits ##############
+###########################################
+*/
+/* line 192, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
+.video-produit {
+  display: inline;
+}
+
+/*# sourceMappingURL=../css/css.map */
