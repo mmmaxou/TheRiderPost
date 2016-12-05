@@ -79,6 +79,11 @@ img {
 */
 
 #logo {
+    a {
+        display: block;
+        width: 150px;
+        margin: auto;
+    }
     text-align: center;
     padding: 15px 0;
 
