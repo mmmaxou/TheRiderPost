@@ -9,16 +9,62 @@ $heightHr:1px;
 
 $colorForm:#d5d5d5;
 
-
+/*
+##############################################
+############# CLASSES GENERALES ##############
+##############################################
+*/
+.myFont {
+/*    font-family: 'Dosis', sans-serif;*/
+    font-size: 40px;
+    border: 0;
+    margin: 0;
+    hyphens: auto;
+    max-width: 100%;
+}
+.fix-it {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}    
+.text-center {
+    text-align: center;
+}
+.middle-content {
+    display: flex; /* contexte sur le parent */
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+}
+a, a:hover, a:visited {
+    color: inherit;
+}
+.roboto-light {
+    font-weight: 300;
+    letter-spacing: 10px;
+}
 *{
     font-family:$font;
 }
 body{
     background-color: $background-global;
-   
+
 }
 header, footer{
     background-color:$header-footer-color;
+}
+img {
+    max-width: 100%;
+}
+.hr{
+    background-color:$bk; 
+    height:$heightHr;
+}
+.hr-vertical {
+    display: block;
+    background-color: white;
+    height: 45px;
+    width: 1px;
+    margin: 0 15px;
 }
 .container{
     background-color:$bg-container;
@@ -26,10 +72,131 @@ header, footer{
 #top-carousel{
     height:400px;
 }
-.hr{
-    background-color:$bk; 
-    height:$heightHr;
+
+/*
+#################################
+############# Logo ##############
+#################################
+*/
+
+#logo {
+    text-align: center;
+    padding: 15px 0;
+
+    h1 {
+        margin: 0;
+        color: white;
+        line-height: 1.7rem;
+    }
+
+    span {
+        display: inline;
+    }
 }
+#the h1 {
+    display: inline;
+    margin-right: 10rem;
+
+}
+#post h1 {
+    display: inline;
+    margin-left: 10rem;
+}
+#rider h1 {
+    display: inline;
+    color: aquamarine;
+}
+
+/*
+######################################
+############# Thumbnail ##############
+######################################
+*/
+div.thumbnail {
+    border: none;
+
+    .thumbnail-item {
+        padding: 0;
+        position: relative;
+
+        p {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            color: white;
+            font-size: 3rem;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    .thumbnail-overlay {
+        background-color: rgba(0,0,0,0.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+}
+
+
+/*
+###################################
+############# Footer ##############
+###################################
+*/
+
+footer {
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+
+    a {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        background-image: url("../image/socials.png");
+    }
+
+    #btn-fb {
+        background-position: -3px -5px;
+        &:hover {
+            background-position: -3px -52px;    
+        }
+    }
+    #btn-tw {
+        background-position: -64px -5px;
+        &:hover {
+            background-position: -64px -52px;    
+        }
+    }
+
+}
+
+
+/*
+###########################################
+############# Video-Produits ##############
+###########################################
+*/
+
+.video-produit {
+	display: inline;
+}
+
+
+
+
 
 .formulaire{
     padding:15px;
