@@ -7,6 +7,7 @@ $bg-container:#e8e8e8;
 $bk:#000;
 $heightHr:1px;
 
+$colorForm:#d5d5d5;
 
 /*
 ##############################################
@@ -233,3 +234,34 @@ footer {
 
 
 
+.formulaire{
+    padding:15px;
+    text-indent: 30px;
+    text-align:center;
+}
+.formTitle {
+	text-align:left;
+    text-indent:110px;
+}
+.mail, .message, .formTitle{  
+    width:80%;
+}
+.mail, .message,.btn-form{
+    background-color:$colorForm;
+    border:none;
+    color:$bk;
+    padding:10px;
+    margin:10px;    
+    display:inline-block;
+}
+textarea{
+    resize: none;
+    height: 200px;
+}
+.message{
+    
+}
+.btn-form{
+    margin:auto;
+    width:auto;
+}
