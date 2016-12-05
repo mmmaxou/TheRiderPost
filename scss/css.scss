@@ -8,6 +8,30 @@ $bk:#000;
 $heightHr:1px;
 
 $colorForm:#d5d5d5;
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
 
 /*
 ##############################################
@@ -54,6 +78,7 @@ header, footer{
 }
 img {
     max-width: 100%;
+    max-height: 100%;
 }
 .hr{
     background-color:$bk; 
@@ -114,26 +139,54 @@ img {
 }
 
 /*
-#################################
-############# Logo ##############
-#################################
+#####################################
+############# Carousel ##############
+#####################################
 */
 
 .carousel {
     
     .carousel-inner {
         max-height: 100%;
-    }
-    
-    .item > img {
-        width: 100%;
-    }
         
-    .carousel-caption {
-        position: absolute;
-        top: 0;
-        left: 0;        
-    }     
+        .item {
+            max-height: 100%;
+            
+            img {
+                width: 100%;
+            }
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 0;
+            left: 0;        
+        }          
+    } 
+}
+
+@media all and ( max-width: 700px )  {
+    #top-carousel {
+        height: 200px;        
+        .carousel-inner {
+            height: 200px;
+        }        
+    }
+}
+
+@media all and ( max-width: 400px ) {
+    .carousel-inner {
+        height: 100%;
+        
+        .item {
+            height: 100%;
+            
+            img {
+                height: 100%;
+                object-fit: fill;
+                object-position: top center;
+            }
+        }
+    }
 }
 
 
@@ -154,6 +207,15 @@ div.thumbnail {
     .thumbnail-item {
         padding: 0;
         position: relative;
+        
+        @include tablet {
+            height: 100px;
+            
+            img {
+                max-height: 100%;
+            }
+            
+        }
 
         p {
             position: absolute;
@@ -181,6 +243,10 @@ div.thumbnail {
         top: 0;
     }
 }
+
+
+
+
 
 
 /*

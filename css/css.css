@@ -234,19 +234,45 @@ footer #btn-tw:hover {
   display: inline;
 }
 
-.carousel-inner {
-        max-height: 100%;
-    }
-.carousel .item > img {
-	width: 100%;
+.carousel .carousel-inner {
+	max-height: 100%;
 }
 
-.carousel .carousel-caption {
+.carousel .carousel-inner .item {
+	max-height: 100%;
+}
+
+.carousel .carousel-inner .item img {
+	width: 100%;    
+                object-fit: fill;
+                object-position: top center;
+}
+
+.carousel .carousel-inner .carousel-caption {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+@media all and ( max-width: 700px ) {
+    #top-carousel {
+        height: 200px;
+    }
+}
+@media all and (max-width: 400px) {
+	.carousel-inner {
+		height: 100%;
+	}
 
+	.carousel-inner .item {
+		height: 100%;
+	}
+
+	.carousel-inner .item img {
+		height: 100%;
+		object-fit: fill;
+		object-position: top center;
+	}
+}
 
 /*# sourceMappingURL=../css/css.map */
 .formulaire {
