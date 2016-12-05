@@ -67,6 +67,7 @@ img {
 }
 .container{
     background-color:$bg-container;
+    padding: 0;
 }
 #top-carousel{
     height:400px;
@@ -112,12 +113,42 @@ img {
 }
 
 /*
+#################################
+############# Logo ##############
+#################################
+*/
+
+.carousel {
+    
+    .carousel-inner {
+        max-height: 100%;
+    }
+    
+    .item > img {
+        width: 100%;
+    }
+        
+    .carousel-caption {
+        position: absolute;
+        top: 0;
+        left: 0;        
+    }     
+}
+
+
+
+/*
 ######################################
 ############# Thumbnail ##############
 ######################################
 */
 div.thumbnail {
     border: none;
+    padding: 0;
+    
+    .row {
+        margin: 0;
+    }
 
     .thumbnail-item {
         padding: 0;

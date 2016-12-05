@@ -65,7 +65,6 @@ header, footer {
 img {
   max-width: 100%;
 }
-
 /* line 57, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 .hr {
   background-color: #000;
@@ -84,6 +83,7 @@ img {
 /* line 68, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 .container {
   background-color: #e8e8e8;
+    padding: 0;
 }
 
 /* line 71, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
@@ -139,7 +139,11 @@ img {
 */
 /* line 114, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
 div.thumbnail {
-  border: none;
+    border: none;
+    padding: 0;
+}
+div.thumbnail .row {
+    margin: 0;
 }
 
 /* line 117, D:/Max/Softwares/wamp/www/TheRiderPost/scss/css.scss */
@@ -229,5 +233,19 @@ footer #btn-tw:hover {
 .video-produit {
   display: inline;
 }
+
+.carousel-inner {
+        max-height: 100%;
+    }
+.carousel .item > img {
+	width: 100%;
+}
+
+.carousel .carousel-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 
 /*# sourceMappingURL=../css/css.map */
