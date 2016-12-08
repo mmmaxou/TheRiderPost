@@ -58,6 +58,8 @@ img {
 .hr{
     background-color:$bk; 
     height:$heightHr;
+    clear:both;
+    margin-bottom:15px;
 }
 .hr-vertical {
     display: block;
@@ -68,6 +70,7 @@ img {
 }
 .container{
     background-color:$bg-container;
+    padding: 0;
 }
 #top-carousel{
     height:400px;
@@ -113,6 +116,31 @@ img {
 }
 
 /*
+#################################
+############# Logo ##############
+#################################
+*/
+
+.carousel {
+    
+    .carousel-inner {
+        max-height: 100%;
+    }
+    
+    .item > img {
+        width: 100%;
+    }
+        
+    .carousel-caption {
+        position: absolute;
+        top: 0;
+        left: 0;        
+    }     
+}
+
+
+
+/*
 ######################################
 ############# Thumbnail ##############
 ######################################
@@ -120,6 +148,10 @@ img {
 div.thumbnail {
     border: none;
     background:none;
+    padding: 0;
+    .row {
+        margin: 0;
+    }
     .thumbnail-item {
         padding: 0;
         position: relative;
@@ -150,6 +182,22 @@ div.thumbnail {
         top: 0;
     }
 }
+/*
+###################################
+############# Articles ############
+###################################
+*/
+.article-container{
+    padding:20px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
 
 /*
 ###################################
@@ -196,9 +244,32 @@ footer {
 
 .video-produit {
 	display: inline;
+    
 }
-
-
+.video{
+    height: 400px;
+}
+.video-text-container, .produit-text-container{
+    padding:50px;
+    
+}.video-text-container p,.produit-text-container p{
+    font-size: 2em;
+    
+}
+.produit{
+    height: 400px;
+}
+.produit-text-container img{
+    width:400px;
+    height:250px;
+}
+.image-produit{
+    width:400px;
+    height:250px;
+    background-image: url('../image/cruiser.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+}
 
 
 
