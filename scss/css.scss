@@ -9,13 +9,43 @@ $heightHr:1px;
 
 $colorForm:#d5d5d5;
 
+$tablet-width:975px;
+$desktop-width:3200px;
+
+
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            @content;
+    }
+}
+
+
 /*
 ##############################################
 ############# CLASSES GENERALES ##############
 ##############################################
 */
 .myFont {
-/*    font-family: 'Dosis', sans-serif;*/
+    /*    font-family: 'Dosis', sans-serif;*/
     font-size: 40px;
     border: 0;
     margin: 0;
@@ -54,6 +84,7 @@ header, footer{
 }
 img {
     max-width: 100%;
+    max-height: 100%;
 }
 .hr{
     background-color:$bk; 
@@ -115,27 +146,70 @@ img {
     color: aquamarine;
 }
 
+#searchbar{
+    position:relative;
+    margin-top:-50px;
+    
+    text-align:right;
+}
+#search{
+    width:200px;
+    height:50px;
+    background:rgba(212, 212, 212, 0.26);
+    border:0px solid #dbdbdb;
+    padding-left:15px;
+}
+
+
 /*
-#################################
-############# Logo ##############
-#################################
+#####################################
+############# Carousel ##############
+#####################################
 */
 
 .carousel {
-    
+
     .carousel-inner {
         max-height: 100%;
+
+        .item {
+            max-height: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 0;
+            left: 0;        
+        }          
+    } 
+}
+
+@media all and ( max-width: 700px )  {
+    #top-carousel {
+        height: 200px;        
+        .carousel-inner {
+            height: 200px;
+        }        
     }
-    
-    .item > img {
-        width: 100%;
+}
+
+@media all and ( max-width: 400px ) {
+    .carousel-inner {
+        height: 100%;
+
+        .item {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: fill;
+                object-position: top center;
+            }
+        }
     }
-        
-    .carousel-caption {
-        position: absolute;
-        top: 0;
-        left: 0;        
-    }     
 }
 
 
@@ -147,7 +221,6 @@ img {
 */
 div.thumbnail {
     border: none;
-    background:none;
     padding: 0;
     .row {
         margin: 0;
@@ -155,6 +228,15 @@ div.thumbnail {
     .thumbnail-item {
         padding: 0;
         position: relative;
+
+        @include tablet {
+            height: 100px;
+
+            img {
+                max-height: 100%;
+            }
+
+        }
 
         p {
             position: absolute;
@@ -173,6 +255,12 @@ div.thumbnail {
             height: 200px;
             object-fit: cover;
         }
+
+        &:hover .thumbnail-overlay{
+            transition:all 0.2s ease;
+            background-color:rgba(0,0,0,0.3);
+        }
+
     }
     .thumbnail-overlay {
         background-color: rgba(0,0,0,0.7);
@@ -180,17 +268,31 @@ div.thumbnail {
         width: 100%;
         height: 100%;
         top: 0;
+        transition:all 0.2s ease;
     }
+
+}
+.thumbnail-overlay:hover{
+    background:red;
 }
 /*
 ###################################
 ############# Articles ############
 ###################################
 */
+.articles{
+    padding-right:50px;
+    padding-left:50px;
+}
 .article-container{
     padding:20px;
     text-align: justify;
 }
+
+
+
+
+
 
 
 
@@ -213,26 +315,32 @@ footer {
     justify-content: center;
     align-items: flex-end;
 
-    a {
-        display: inline-block;
-        height: 45px;
-        width: 45px;
-        background-image: url("../image/socials.png");
-    }
-
-    #btn-fb {
-        background-position: -3px -5px;
-        &:hover {
-            background-position: -3px -52px;    
+//    a {
+//        display: inline-block;
+//        height: 45px;
+//        width: 45px;
+//        background-image: url("../image/socials.png");
+//    }
+//
+//    #btn-fb {
+//        background-position: -3px -5px;
+//        &:hover {
+//            background-position: -3px -52px;    
+//        }
+//    }
+//    #btn-tw {
+//        background-position: -64px -5px;
+//        &:hover {
+//            background-position: -64px -52px;    
+//        }
+//    }
+    a{
+        display:inline-block;
+        text-decoration:none;
+        &:hover{
+            text-decoration: none;
         }
     }
-    #btn-tw {
-        background-position: -64px -5px;
-        &:hover {
-            background-position: -64px -52px;    
-        }
-    }
-
 }
 
 
@@ -243,18 +351,20 @@ footer {
 */
 
 .video-produit {
-	display: inline;
-    
+    display: inline;
+
 }
 .video{
     height: 400px;
+    
 }
 .video-text-container, .produit-text-container{
     padding:50px;
-    
+    text-align: center;    
+
 }.video-text-container p,.produit-text-container p{
     font-size: 2em;
-    
+
 }
 .produit{
     height: 400px;
@@ -262,6 +372,7 @@ footer {
 .produit-text-container img{
     width:400px;
     height:250px;
+   
 }
 .image-produit{
     width:400px;
@@ -280,7 +391,7 @@ footer {
     margin-bottom:100px;
 }
 .formTitle {
-	text-align:left;
+    text-align:left;
     text-indent:110px;
 }
 .mail, .message, .formTitle{  
@@ -299,7 +410,7 @@ textarea{
     height: 200px;
 }
 .message{
-    
+
 }
 .btn-form{
     margin:auto;
