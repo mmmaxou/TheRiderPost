@@ -175,6 +175,23 @@ img {
 }
 
 /*
+#################################
+############# Menu ##############
+#################################
+*/
+.menu-categories {
+    padding: 0px 75px;
+}
+.menu-categories table {
+    margin: 25px;
+}
+.menu-categories .row div {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*
 #####################################
 ############# Carousel ##############
 #####################################
@@ -195,7 +212,8 @@ img {
         .carousel-caption {
             position: absolute;
             top: 0;
-            left: 0;        
+            left: 0;    
+            text-shadow: 0px 0px 15px black;    
         }          
     } 
 }
@@ -302,15 +320,16 @@ div.thumbnail {
     text-align: justify;
 }
 
-
-
-
-
-
-
-
-
-
+.articles-item.articles-big {
+    padding: 0;
+    margin-bottom: 50px;
+}
+@media all and ( max-width: 700px )  {
+    .articles {
+        padding: 0 5px;
+    }
+    
+}
 
 
 

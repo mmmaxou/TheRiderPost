@@ -135,7 +135,9 @@ img {
   .carousel .carousel-inner .carousel-caption {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    text-shadow: 0px 0px 15px black;
+}
 
 @media all and (max-width: 700px) {
   #top-carousel {
@@ -288,5 +290,23 @@ textarea {
 .btn-form {
   margin: auto;
   width: auto; }
+
+.articles-item.articles-big {
+    padding: 0;
+    margin-bottom: 50px;
+}
+.menu-categories {
+    padding: 0px 75px;
+}
+.menu-categories table {
+    margin: 25px;
+}
+.menu-categories .row div {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
 
 /*# sourceMappingURL=css.css.map */
