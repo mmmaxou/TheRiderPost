@@ -131,25 +131,24 @@ img {
 ############# Carousel ##############
 #####################################
 */
-.carousel .carousel-inner {
-  max-height: 100%; }
-  .carousel .carousel-inner .item {
-    max-height: 100%; }
+    .carousel .carousel-inner {
+        max-height: 100%; }
+    .carousel .carousel-inner .item {
+        max-height: 100%; }
     .carousel .carousel-inner .item img {
-      width: 100%; }
-  .carousel .carousel-inner .carousel-caption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-shadow: 0px 0px 15px black;
-}
+        width: 100%; }
+    .carousel .carousel-inner .carousel-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-shadow: 0px 0px 15px black;
+    }
 
 @media all and (max-width: 700px) {
     #top-carousel,
     #bot-carousel{
     height: 200px; }
-    #top-carousel .carousel-inner,
-    #bot-carousel .carousel-inner {
+    #top-carousel .carousel-inner{
       height: 200px; } }
 @media all and (max-width: 400px) {
   .carousel-inner {
@@ -267,8 +266,6 @@ footer {
     font-size: 2em; 
 }
 
-
-
 @media all and (max-width: 700px) {
     .video-text-container, .produit-text-container {
         text-align: center;
@@ -288,6 +285,7 @@ footer {
 
 #bot-carousel {
     margin-bottom: 15px;
+    height: 400px;
 }
 
 .formulaire {
