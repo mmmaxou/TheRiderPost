@@ -378,6 +378,15 @@ textarea {
     padding: 10px;
     text-align: center;
 }
+@media all and (max-width: 700px) {
+	.menu-categories .row{
+		display: none;
+	}
+	.menu-categories .row:nth-child(2){
+		display: block;
+	}
+	
+}
 
 
 
