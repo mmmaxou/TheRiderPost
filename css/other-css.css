@@ -302,9 +302,23 @@ textarea {
     padding: 0;
     margin-bottom: 50px;
 }
+.articles-item{
+	padding-bottom:10px;
+}
 .articles-item:hover{
 	background-color:rgba(0,0,0,0.1);
 	transition:0.5s all ease;
+}
+.articles-item:hover .suite{
+	color:white;
+	transition:0.5s all ease;
+}
+.suite{
+	margin-bottom:5px;
+}
+.suite:hover{
+	text-decoration:underline;
+	color:white;
 }
 
 .menu-categories {
