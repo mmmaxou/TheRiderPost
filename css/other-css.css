@@ -38,7 +38,9 @@ a, a:hover, a:visited {
   font-family: "Roboto", "Helvetica", sans-serif; }
 
 body {
-  background-color: #edf3f3; }
+  background-image:url('../image/pattern1.png');
+
+}
 
 header, footer {
   background-color: #3f3f3f; }
@@ -61,8 +63,11 @@ img {
   margin: 0 15px; }
 
 .container {
-  background-color: #e8e8e8;
-  padding: 0; }
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0; 
+}
+
+
 
 #top-carousel {
   height: 400px; }
@@ -212,6 +217,8 @@ div.thumbnail {
   padding: 20px;
   text-align: justify; }
 
+
+
 /*
 ###################################
 ############# Footer ##############
@@ -332,6 +339,11 @@ textarea {
     padding: 0;
     margin-bottom: 50px;
 }
+.articles-item:hover{
+	background-color:rgba(0,0,0,0.1);
+	transition:0.5s all ease;
+}
+
 .menu-categories {
     padding: 0px 75px;
 }
