@@ -145,9 +145,11 @@ img {
 }
 
 @media all and (max-width: 700px) {
-  #top-carousel {
+    #top-carousel,
+    #bot-carousel{
     height: 200px; }
-    #top-carousel .carousel-inner {
+    #top-carousel .carousel-inner,
+    #bot-carousel .carousel-inner {
       height: 200px; } }
 @media all and (max-width: 400px) {
   .carousel-inner {
@@ -246,21 +248,36 @@ footer {
   display: inline; }
 
 .video {
-  height: 400px; }
+    width: 100%;
+    padding: 0;
+}
+.video iframe {
+    width: 100%;
+    height: 400px;
+}
 
 .video-text-container, .produit-text-container {
-  padding: 50px;
-  text-align: center; }
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    min-width: 700px;
+}
 
 .video-text-container p, .produit-text-container p {
-  font-size: 2em; }
+    font-size: 2em; 
+}
 
-.produit {
-  height: 400px; }
 
-.produit-text-container img {
-  width: 400px;
-  height: 250px; }
+
+@media all and (max-width: 700px) {
+    .video-text-container, .produit-text-container {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        min-width: 700px;
+    }
+}
+
 
 .image-produit {
   width: 400px;
@@ -268,6 +285,10 @@ footer {
   background-image: url("../image/cruiser.jpg");
   background-repeat: no-repeat;
   background-position: center; }
+
+#bot-carousel {
+    margin-bottom: 15px;
+}
 
 .formulaire {
   padding: 15px;
@@ -297,6 +318,24 @@ textarea {
 .btn-form {
   margin: auto;
   width: auto; }
+
+@media all and (max-width: 700px) {
+    .formulaire {
+        padding: 0;
+        text-indent: 0;
+    }
+    .mail, .message, .formTitle {
+        width: 100%;
+        text-indent: 0;
+    }
+    .mail, .message, .btn-form {
+        margin: 0px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+
+
 
 .articles-item.articles-big {
     padding: 0;
